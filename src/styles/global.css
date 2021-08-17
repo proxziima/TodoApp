@@ -1,0 +1,72 @@
+/*==================== VARIABLES CSS ====================*/
+:root{
+    --header-height: 8rem;
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    
+    /* HSL color mode */
+    --first-color: hsl(232, 48%, 46%);
+    --first-color-alt: hsl(232, 51%, 42%);
+    --background: hsl(232, 69%, 97%);
+    --background-alt: hsl(232, 80%, 20%);
+    --dark-grey: hsl(232, 21%, 35%);
+    --light-grey: hsl(232, 21%, 58%);
+    --dark-blue: #2646C4;
+    --blue: #4F74FF;
+    --pink: #D103FC;
+    --red: #B74F6F;
+    --white: #fff;
+    --text-color: #FFFFFF;
+    --input-color: #010319;
+    --body-color: #BBC2D8;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+
+    /*========== Font Size  ==========*/
+    --big-font-size: 3rem;
+    --h1-font-size:1.8rem;
+    --h2-font:size: 1.6rem;
+    --small-font-size: 1.4rem;
+    --smaller-font-size: 1.2rem;
+
+    --font-regular: 400;
+    --font-bold: 700; 
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/*==================== BASE ====================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* Arredondar o font-size para utilizar REMs inteiros */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--background);
+    color: var(--body-color);
+}
+
+/*==================== MAIN ====================*/
+
+main h1{
+    color: var(--background-alt);
+}

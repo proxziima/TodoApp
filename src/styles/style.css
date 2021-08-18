@@ -5,13 +5,13 @@
     margin-right: 3rem;
 }
 
+.grid{
+    display: grid;
+    gap: 3rem;
+}
+
 .header{
-    width: 100%;
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-   
+    width: 100%;   
     color: var(--light-grey);
 }
 
@@ -25,8 +25,78 @@
     align-items: center;
 }
 
+.nav svg{
+    width: 2rem;
+    cursor: pointer;
+    color: var(--light-grey);
+}
+
+.nav__btns svg:last-of-type{
+    margin-left: 2.5rem;
+}
+
 /*==================== MAIN ====================*/
 
 main h1{
+    font-size: var(--big-font-size);
+    font-weight: var(--font-bold);
     color: var(--background-alt);
+}
+
+/*==================== CATEGORIES ====================*/
+.categories__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.categories__content{
+    width: 16rem;
+    height: 10rem;
+    border-radius: 2rem;
+    background-color: var(--white);
+    margin-right: 1rem;
+    box-shadow: 0 .5rem .5rem rgba(0,0,0,0.1);
+}
+
+.categories__content .task__count{
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-bold);
+    color: var(--light-grey);
+    padding: 2rem 2rem 0.6rem;
+}
+
+.categories__content .categories__title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    color: var(--background-alt);
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+/*========== progressbar =============*/
+.progress__bar,
+.progress_percentage {
+    height: .2rem;
+    border-radius: .1rem;
+}
+
+.progress__bar{
+    margin: 0 1.5rem;
+    background-color: var(--light-grey);
+}
+
+.progress_percentage{
+    display: block;
+    background-color: var(--pink);
+}
+
+.progress__mark{
+    display: block;
+    width: .2rem;
+    height: .5rem;
+}
+
+.progress__trabalho{
+    width: 25%;
 }

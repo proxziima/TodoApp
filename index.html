@@ -28,29 +28,44 @@
     <title>TodoApp - Making your day simple</title>
 </head>
 <body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <i class="nav__menu" id="nav-menu" data-feather="menu"></i>
-            <div class="nav__btns">
-                <i class="nav__search" id="nav-search" data-feather="search"></i>
-                <i class="nav__notif" id="nav-notif" data-feather="bell"></i>
-            </div>
-        </nav>
-    </header>
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <h1>👋 Bom dia, Vinicius!</h1>
-        <!--==================== CATEGORIES ====================-->
-        <section class="categories">
-            
-        </section>
-
-        <!--==================== TASKS TODAY ====================-->
-        <section class="tasksToday">
-            
-        </section>
-    </main>
+    <div class="container">
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav">
+                <i class="nav__menu" id="nav-menu" data-feather="menu"></i>
+        
+                <div class="nav__btns">
+                    <i class="nav__search" id="nav-search" data-feather="search"></i>
+                    <i class="nav__notif" id="nav-notif" data-feather="bell"></i>
+                </div>
+            </nav>
+        </header>
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <h1>👋 Bom dia, Vinicius!</h1>
+            <!--==================== CATEGORIES ====================-->
+            <section class="categories section">
+                <h2 class="section__title">Categories</h2>
+                <div class="categories__container">
+                    <!--==================== CATEGORIES 1 ====================-->
+                    <div class="categories__content">
+                        <p class="task__count">10 tasks</p>
+                        <h3 class="categories__title">Trabalho</h3>
+                        <div class="progress__bar">
+                            <span class="progress_percentage progress__trabalho"></span>
+                            <span class="progress__mark"></span>
+                        </div>
+                    </div>
+                    <!--==================== CATEGORIES 2 ====================-->
+                    
+                </div>
+            </section>
+            <!--==================== TASKS TODAY ====================-->
+            <section class="tasksToday">
+        
+            </section>
+        </main>
+    </div>
     
 </body>
 </html>

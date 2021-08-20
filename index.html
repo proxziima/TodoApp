@@ -45,24 +45,96 @@
             <h1>👋 Bom dia, Vinicius!</h1>
             <!--==================== CATEGORIES ====================-->
             <section class="categories section">
-                <h2 class="section__title">Categories</h2>
+                <h2 class="section__title">CATEGORIAS</h2>
                 <div class="categories__container">
                     <!--==================== CATEGORIES 1 ====================-->
                     <div class="categories__content">
                         <p class="task__count">10 tasks</p>
                         <h3 class="categories__title">Trabalho</h3>
                         <div class="progress__bar">
-                            <span class="progress_percentage progress__trabalho"></span>
-                            <span class="progress__mark"></span>
+                            <span style="width: 25%;" class="progress_percentage progress__trabalho"></span>
+                            <span class="progress__mark progress__trabalho"></span>
                         </div>
                     </div>
                     <!--==================== CATEGORIES 2 ====================-->
-                    
+                    <div class="categories__content">
+                        <p class="task__count">08 tasks</p>
+                        <h3 class="categories__title">Pessoal</h3>
+                        <div class="progress__bar">
+                            <span style="width: 75%;" class="progress_percentage progress__pessoal"></span>
+                            <span class="progress__mark progress__pessoal"></span>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!--==================== TASKS TODAY ====================-->
-            <section class="tasksToday">
-        
+            <section class="tasks section">
+                <h2 class="section__title">TAREFAS DE HOJE</h2>
+                 <!--==================== LIST ====================-->
+                <ul class="todo__items">
+                    <!--==================== ITEM 1 ====================-->
+                    <li class="todo__item">
+                        <div class="todo__content item__flex">
+                            <input id="todo-check" class="todo__check" type="checkbox">
+                            <label for="todo-check" class="todo__label">
+                                <span class="testeSpan">
+                                    <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                        <polyline points="1 5 4 8 11 1"></polyline>
+                                      </svg>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Reward yourself with a nap
+                                </span>
+                            </label>
+                        </div>
+                        <a class="todo__delete" href="#">
+                            <i class="todo__icon" data-feather="trash-2"></i>
+                        </a>
+                    </li>
+                    
+                    <!--==================== ITEM 2 ====================-->
+                    <li class="todo__item">
+                        <div class="todo__content item__flex">
+                            <input id="todo-check2" class="todo__check" type="checkbox">
+                            <label for="todo-check2" class="todo__label">
+                                <span>
+                                    <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                        <polyline points="1 5 4 8 11 1"></polyline>
+                                      </svg>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Reward yourself with a nap
+                                </span>
+                            </label>
+                        </div>
+                        <a class="todo__delete" href="#">
+                            <i class="todo__icon" data-feather="trash-2"></i>
+                        </a>
+                    </li>
+                    
+                    <!--==================== ITEM 3 ====================-->
+                    <li class="todo__item">
+                        <div class="todo__content item__flex">
+                            <input id="todo-check3" class="todo__check" type="checkbox">
+                            <label for="todo-check3" class="todo__label">
+                                <span>
+                                    <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                        <polyline points="1 5 4 8 11 1"></polyline>
+                                      </svg>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Reward yourself with a nap
+                                </span>
+                            </label>
+                        </div>
+                        <a class="todo__delete" href="#">
+                            <i class="todo__icon" data-feather="trash-2"></i>
+                        </a>
+                    </li>
+                </ul>
             </section>
         </main>
     </div>

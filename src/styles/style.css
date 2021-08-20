@@ -1,6 +1,6 @@
 /*==================== LAYOUT ====================*/
 .container{
-    max-width: 768px;
+    max-width: 968px;
     margin-left: 3rem;
     margin-right: 3rem;
 }
@@ -11,7 +11,9 @@
 }
 
 .header{
-    width: 100%;   
+    width: 100%;
+    left: 0;
+    top: 0;   
     color: var(--light-grey);
 }
 
@@ -51,8 +53,8 @@ main h1{
 }
 
 .categories__content{
-    width: 16rem;
-    height: 10rem;
+    min-width: 16rem;
+    min-height: 10rem;
     border-radius: 2rem;
     background-color: var(--white);
     margin-right: 1rem;
@@ -82,21 +84,199 @@ main h1{
 }
 
 .progress__bar{
+    display: flex;
+    align-items: flex-end;
     margin: 0 1.5rem;
     background-color: var(--light-grey);
 }
 
-.progress_percentage{
+.progress_percentage,
+.progress__mark{
     display: block;
-    background-color: var(--pink);
+
 }
 
 .progress__mark{
-    display: block;
     width: .2rem;
     height: .5rem;
+    border-radius: .1rem .1rem 0 0;
+    transform: translateX(-.2rem);
 }
 
 .progress__trabalho{
-    width: 25%;
+    background-color: var(--pink);
+    box-shadow:  0 .2rem .7rem .1rem rgba(209, 3, 252, .6);
 }
+
+.progress__pessoal{
+    background-color: var(--dark-blue);
+    box-shadow:  0 .2rem .7rem .1rem rgba(38, 70, 196, .6);
+}
+
+.progress__compras{
+    background-color: var(--yellow-green);
+    box-shadow:  0 .2rem .7rem .1rem rgba(162, 215, 41, .6);
+}
+
+/*==================== TASKS ====================*/
+.todo__items{
+    max-width: 968px;
+}
+
+.todo__item:not(:first-child):not(:last-child){
+    margin: .5rem 0;
+}
+
+.todo__item{
+    display: flex;
+    min-width: 0;
+    max-height: 5.5rem;
+    justify-content: space-between;
+    border-radius: 1.8rem;
+    background-color: var(--white);
+    filter: drop-shadow(.4rem .4rem .5rem rgba(0,0,0,0.05));
+}
+
+.todo__content{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+    color: var(--background-alt);
+    
+}
+
+/*==================== TASK ITEM ANIMTATIONS AND STYLES ====================*/
+
+.todo__check{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+}
+
+.todo__label{
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.todo__label span{
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0,0,0);
+}
+
+.todo__label span:first-child{
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    transform: scale(1);
+    vertical-align: middle;
+    border: .2rem solid #B9B8C3;
+    transition: all 0.2s ease;
+}
+
+.todo__label span:first-child svg{
+    position:absolute;
+    top: .6rem;
+    left: .4rem;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.todo__label span:first-child::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--dark-blue);
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+    transition-delay: 0.2s;
+}
+
+.todo__label span:first-child{
+    border-color: var(--dark-blue);
+}
+
+.todo__label span:last-child{
+    margin-left: 1.5rem;
+}
+
+.todo__label  span:last-child:after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--body-color);
+    transform-origin: 0 0;
+    transform: scaleX(0);
+  }
+
+.todo__check:checked + .todo__label span:first-child{
+    border-color: var(--body-color);
+    background: var(--body-color);
+    animation: check 0.6s ease;
+}
+
+.todo__check:checked + .todo__label span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.todo__check:checked + .todo__label span:first-child:before{
+    transform: scale(2.2);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.todo__check:checked + .todo__label span:last-child{
+    color: #B9B8C3;
+    transition: all 0.3s ease;
+}
+
+.todo__check:checked + .todo__label span:last-child:after{
+    transform: scaleX(1);
+    transition: all 0.3s ease;
+}
+
+@keyframes check {
+    50% {
+      transform: scale(1.2);
+    }
+}
+
+
+.todo__title{
+    border-radius: 50%;
+    padding: 0 1.5rem;
+}
+
+.todo__delete{
+    flex-shrink: 0;
+    padding: 0 1.5rem;
+    border-radius: 1.8rem;
+    box-shadow: -.5rem 0 .4rem rgba(0,0,0,0.1);
+    background-color: var(--red);
+}
+
+.todo__delete > svg{
+    height: 100%;
+    color: var(--white);
+}
+
+
+

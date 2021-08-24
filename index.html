@@ -28,115 +28,193 @@
     <title>TodoApp - Making your day simple</title>
 </head>
 <body>
-    <div class="container">
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav">
-                <i class="nav__menu" id="nav-menu" data-feather="menu"></i>
+    <div class="wrapper grid">
+        <!--==================== SIDE MENU ====================-->
+        <div class="container grid side__menu">
+            <header class="header side-header">
+                <!--==================== BACK BUTTON ====================-->
+                <a id="side-menu-back" class="rounded__button" href="#" onclick="closeNav()">
+                    <i data-feather="chevron-left"></i>
+                </a>
+            </header>
+            <main class="side__main__content">
+                <div class="profile__circle flex__center">
+                    <img src="./src/images/Profile.svg" alt="">
+                </div>
         
-                <div class="nav__btns">
-                    <i class="nav__search" id="nav-search" data-feather="search"></i>
-                    <i class="nav__notif" id="nav-notif" data-feather="bell"></i>
-                </div>
-            </nav>
-        </header>
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <h1>👋 Bom dia, Vinicius!</h1>
-            <!--==================== CATEGORIES ====================-->
-            <section class="categories section">
-                <h2 class="section__title">CATEGORIAS</h2>
-                <div class="categories__container">
-                    <!--==================== CATEGORIES 1 ====================-->
-                    <div class="categories__content">
-                        <p class="task__count">10 tasks</p>
-                        <h3 class="categories__title">Trabalho</h3>
-                        <div class="progress__bar">
-                            <span style="width: 25%;" class="progress_percentage progress__trabalho"></span>
-                            <span class="progress__mark progress__trabalho"></span>
-                        </div>
-                    </div>
-                    <!--==================== CATEGORIES 2 ====================-->
-                    <div class="categories__content">
-                        <p class="task__count">08 tasks</p>
-                        <h3 class="categories__title">Pessoal</h3>
-                        <div class="progress__bar">
-                            <span style="width: 75%;" class="progress_percentage progress__pessoal"></span>
-                            <span class="progress__mark progress__pessoal"></span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--==================== TASKS TODAY ====================-->
-            <section class="tasks section">
-                <h2 class="section__title">TAREFAS DE HOJE</h2>
-                 <!--==================== LIST ====================-->
-                <ul class="todo__items">
-                    <!--==================== ITEM 1 ====================-->
-                    <li class="todo__item">
-                        <div class="todo__content item__flex">
-                            <input id="todo-check" class="todo__check" type="checkbox">
-                            <label for="todo-check" class="todo__label">
-                                <span class="testeSpan">
-                                    <svg width="12px" height="9px" viewBox="0 0 12 9">
-                                        <polyline points="1 5 4 8 11 1"></polyline>
-                                      </svg>
-                                    </svg>
-                                </span>
-                                <span>
-                                    Reward yourself with a nap
-                                </span>
-                            </label>
-                        </div>
-                        <a class="todo__delete" href="#">
-                            <i class="todo__icon" data-feather="trash-2"></i>
-                        </a>
-                    </li>
-                    
-                    <!--==================== ITEM 2 ====================-->
-                    <li class="todo__item">
-                        <div class="todo__content item__flex">
-                            <input id="todo-check2" class="todo__check" type="checkbox">
-                            <label for="todo-check2" class="todo__label">
-                                <span>
-                                    <svg width="12px" height="9px" viewBox="0 0 12 9">
-                                        <polyline points="1 5 4 8 11 1"></polyline>
-                                      </svg>
-                                    </svg>
-                                </span>
-                                <span>
-                                    Reward yourself with a nap
-                                </span>
-                            </label>
-                        </div>
-                        <a class="todo__delete" href="#">
-                            <i class="todo__icon" data-feather="trash-2"></i>
-                        </a>
-                    </li>
-                    
-                    <!--==================== ITEM 3 ====================-->
-                    <li class="todo__item">
-                        <div class="todo__content item__flex">
-                            <input id="todo-check3" class="todo__check" type="checkbox">
-                            <label for="todo-check3" class="todo__label">
-                                <span>
-                                    <svg width="12px" height="9px" viewBox="0 0 12 9">
-                                        <polyline points="1 5 4 8 11 1"></polyline>
-                                      </svg>
-                                    </svg>
-                                </span>
-                                <span>
-                                    Reward yourself with a nap
-                                </span>
-                            </label>
-                        </div>
-                        <a class="todo__delete" href="#">
-                            <i class="todo__icon" data-feather="trash-2"></i>
-                        </a>
-                    </li>
+                <h1>Vinicius Queiroz</h1>
+                <ul>
+                    <li id="side-templates"><a href=""><i data-feather="bookmark"></i>Templates</a></li>
+                    <li id="side-categorias"><a href=""><i data-feather="grid"></i>Categorias</a></li>
+                    <li id="side-analitico"><a href=""><i data-feather="pie-chart"></i>Analítico</a></li>
                 </ul>
-            </section>
-        </main>
+            </main>
+            <footer class="side__footer item">
+                <img src="./src/images/lineChart.svg" alt="">
+                <p>Bom</p>
+                <h3>Continue consistente 😁</h3>
+            </footer>
+        </div>
+        
+        <!--==================== MAIN CONTENT ====================-->
+        <div id="main-container" class="container grid main__container">
+            <!--==================== HEADER ====================-->
+            <header class="header" id="header">
+                <nav class="nav">
+                    <i class="nav__menu" id="nav-menu" data-feather="menu" onclick="openNav()"></i>
+        
+                    <div class="nav__btns">
+                        <i class="nav__search" id="nav-search" data-feather="search"></i>
+                        <i class="nav__notif" id="nav-notif" data-feather="bell"></i>
+                    </div>
+                </nav>
+            </header>
+            <!--==================== MAIN ====================-->
+            <main class="main__content">
+                <h1>👋 Bom dia, Vinicius!</h1>
+                <!--==================== CATEGORIES ====================-->
+                <section class="categories section">
+                    <h2 class="section__title">CATEGORIAS</h2>
+                    <div class="categories__container">
+                        <!--==================== CATEGORIES 1 ====================-->
+                        <div class="categories__content">
+                            <p class="task__count">10 tasks</p>
+                            <h3 class="categories__title">Trabalho</h3>
+                            <div class="progress__bar">
+                                <span style="width: 25%;" class="progress_percentage progress__trabalho"></span>
+                                <span class="progress__mark progress__trabalho"></span>
+                            </div>
+                        </div>
+                        <!--==================== CATEGORIES 2 ====================-->
+                        <div class="categories__content">
+                            <p class="task__count">08 tasks</p>
+                            <h3 class="categories__title">Pessoal</h3>
+                            <div class="progress__bar">
+                                <span style="width: 75%;" class="progress_percentage progress__pessoal"></span>
+                                <span class="progress__mark progress__pessoal"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--==================== TASKS TODAY ====================-->
+                <section class="tasks section">
+                    <h2 class="section__title">TAREFAS DE HOJE</h2>
+                     <!--==================== LIST ====================-->
+                    <ul class="todo__items">
+                        <!--==================== ITEM 1 ====================-->
+                        <li class="todo__item">
+                            <div class="todo__content item__flex">
+                                <input id="todo-check" class="todo__check" type="checkbox">
+                                <label for="todo-check" class="todo__label">
+                                    <span class="todo__trabalho">
+                                        <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                            <polyline points="1 5 4 8 11 1"></polyline>
+                                          </svg>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Aprender Javascript
+                                    </span>
+                                </label>
+                            </div>
+                            <a class="todo__delete" href="#">
+                                <i class="todo__icon" data-feather="trash-2"></i>
+                            </a>
+                        </li>
+        
+                        <!--==================== ITEM 2 ====================-->
+                        <li class="todo__item">
+                            <div class="todo__content item__flex">
+                                <input id="todo-check2" class="todo__check" type="checkbox">
+                                <label for="todo-check2" class="todo__label">
+                                    <span>
+                                        <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                            <polyline points="1 5 4 8 11 1"></polyline>
+                                          </svg>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Criar meu próprio portfólio
+                                    </span>
+                                </label>
+                            </div>
+                            <a class="todo__delete" href="#">
+                                <i class="todo__icon" data-feather="trash-2"></i>
+                            </a>
+                        </li>
+        
+                        <!--==================== ITEM 3 ====================-->
+                        <li class="todo__item">
+                            <div class="todo__content item__flex">
+                                <input id="todo-check3" class="todo__check" type="checkbox">
+                                <label for="todo-check3" class="todo__label">
+                                    <span>
+                                        <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                            <polyline points="1 5 4 8 11 1"></polyline>
+                                          </svg>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Criar meu primeiro App
+                                    </span>
+                                </label>
+                            </div>
+                            <a class="todo__delete" href="#">
+                                <i class="todo__icon" data-feather="trash-2"></i>
+                            </a>
+                        </li>
+                        <!--==================== ITEM 4 ====================-->
+                        <li class="todo__item">
+                            <div class="todo__content item__flex">
+                                <input id="todo-check4" class="todo__check" type="checkbox">
+                                <label for="todo-check4" class="todo__label">
+                                    <span>
+                                        <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                            <polyline points="1 5 4 8 11 1"></polyline>
+                                          </svg>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Me recompensar com um cochilo
+                                    </span>
+                                </label>
+                            </div>
+                            <a class="todo__delete" href="#">
+                                <i class="todo__icon" data-feather="trash-2"></i>
+                            </a>
+                        </li>
+                        <!--==================== ITEM 5 ====================-->
+                        <li class="todo__item">
+                            <div class="todo__content item__flex">
+                                <input id="todo-check5" class="todo__check" type="checkbox">
+                                <label for="todo-check5" class="todo__label">
+                                    <span>
+                                        <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                            <polyline points="1 5 4 8 11 1"></polyline>
+                                          </svg>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Dominar o mundo !!!
+                                    </span>
+                                </label>
+                            </div>
+                            <a class="todo__delete" href="#">
+                                <i class="todo__icon" data-feather="trash-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+            <!--==================== FOOTER ====================-->
+            <footer>
+                <p>Made with <span>❤️</span> by <a href="#">Vinicius Queiroz</a></p>
+            </footer>
+            <!--==================== ADD BUTTON ====================-->
+            <a class="todo__add rounded__button" href="#">
+                <i class="add__icon" data-feather="plus"></i>
+            </a>
+        </div>
     </div>
     
 </body>
